@@ -1,0 +1,2 @@
+include googletrends/data/*.zip
+include googletrends/data/*.txt

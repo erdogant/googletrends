@@ -1,0 +1,8 @@
+#conda create -n env_googletrends python=3.6
+#conda activate env_googletrends
+#conda install spyder
+
+matplotlib 
+numpy 
+pandas 
+tqdm
