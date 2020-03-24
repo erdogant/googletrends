@@ -14,6 +14,7 @@ import worldmap
 county_names = worldmap.list_county_names()
 # worldmap.list_map_names()[0]
 worldmap.county2code('hong kong')[0][0]
+worldmap.county2code('china')[0][0]
 
 # %% Temporal analysis
 results = googletrends.temporal(searchwords, geo='nl', date_start='01-10-2011')
@@ -28,8 +29,11 @@ googletrends.plot(results)
 results = googletrends.temporal(searchwords, geo='NL', date_start='01-01-2020')
 googletrends.plot(results)
 
-results = googletrends.temporal(searchwords, geo=['NL','japan','hong kong','italy'], date_start='01-12-2019')
-googletrends.plot(results)
+results = googletrends.temporal(searchwords, geo=['NL','china','hong kong','italy'], date_start='01-12-2019')
+googletrends.plot(results, figsize='auto', color_by_searchword=False, group_by_searchword=False)
+googletrends.plot(results, figsize='auto', color_by_searchword=True, group_by_searchword=False)
+googletrends.plot(results, figsize='auto', color_by_searchword=False, group_by_searchword=True)
+googletrends.plot(results, figsize='auto', color_by_searchword=True, group_by_searchword=True)
 
 
 # %% Geographical analysis
@@ -49,7 +53,7 @@ results = googletrends.spatio(searchwords, geo='NL', date_stop='01-02-2020')
 googletrends.plot(results)
 
 # %%
-results = googletrends.related_topics(searchwords[0], geo='', date_start='01-01-2020')
+results = googletrends.related_topics(searchwords[0], geo='NL', date_start='01-01-2020')
 googletrends.plot(results)
 
 
@@ -158,5 +162,32 @@ out = googletrends.trends(searchwords,timeframe='today 6-m', geo='NL')
 
 searchwords; date_start='01-01-2011'; date_stop='10-09-2018'; timeframe=''; width=15; height=8; geo=''; showfig=False; verbose=True; cmap=['#ff0000']
 
+
+# %%
+# Initialize the FacetGrid object
+import seaborn as sns
+df = results['df']
+df = df['NL']
+
+g = sns.FacetGrid(df, row="corona", hue="corona", aspect=5, height=3)
+
+# # Draw the densities in a few steps
+g.map(sns.kdeplot, "corona", shade=True, alpha=1, lw=3.5, bw=.2)
+g.map(sns.kdeplot, "corona", color="w", lw=2, bw=.2)
+g.map(plt.axhline, y=0, lw=2)
+
+# # Define and use a simple function to label the plot in axes coordinates
+def label(x, color, label):
+    ax = plt.gca()
+    ax.text(0, .2, label, color=color, ha="left", va="center", transform=ax.transAxes)
+g.map(label, "corona")
+
+# Set the subplots to overlap
+g.fig.subplots_adjust(hspace=-.25)
+
+# # Remove axes details that don't play well with overlap
+g.set_titles("")
+g.set(yticks=[])
+g.despine(bottom=True, left=True)
 
 # %%
