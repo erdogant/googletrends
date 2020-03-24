@@ -306,19 +306,10 @@ def plot_temporal(results, figsize='auto', cmap='Set1', color_by_searchword=True
 
             # Walk across searchwords
             for k, searchword in enumerate(results['searchwords']):
+                # Set colors and graph nr.
                 if searchword not in df.columns: df[searchword]=0
                 color = colors[k] if color_by_searchword else colors[i]
                 pi = np.mod(k, len(results['searchwords'])) if group_by_searchword else np.mod(i, len(results['df']))
-
-                # if color_by_searchword:
-                #     color=colors[k]
-                # else:
-                #     color=colors[i]
-                # if group_by_searchword:
-                #     pi = np.mod(k, len(results['searchwords']))
-                # else:
-                #     pi = np.mod(i, len(results['df']))
-
                 # Make smooth line
                 ys = df[searchword]
                 xnew, ynew = _make_smooth_line(xs.values, ys.values)
