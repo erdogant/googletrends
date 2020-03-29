@@ -4,7 +4,7 @@
 [![PyPI Version](https://img.shields.io/pypi/v/googletrends)](https://pypi.org/project/googletrends/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/erdogant/googletrends/blob/master/LICENSE)
 [![Downloads](https://pepy.tech/badge/googletrends/week)](https://pepy.tech/project/googletrends/week)
-[![Coffee](https://img.shields.io/badge/donate-grey.svg)](https://erdogant.github.io/donate/?currency=USD&amount=5)
+[![Donate](https://img.shields.io/badge/donate-grey.svg)](https://erdogant.github.io/donate/?currency=USD&amount=5)
 
 * googletrends is Python package to examine trending, spatio and temporal google searching for input queries.
 * Distributed under the MIT license.
