@@ -19,7 +19,7 @@ setuptools.setup(
      version=new_version,
      author="Erdogan Taskesen",
      author_email="erdogant@gmail.com",
-     description="Python package googletrends is to quantify usage of search term in google and to determine related queries.",
+     description="Python package to examine trending, spatio and temporal google searching for input queries.",
      long_description=long_description,
      long_description_content_type="text/markdown",
      url="https://github.com/erdogant/googletrends",

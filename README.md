@@ -4,11 +4,11 @@
 [![PyPI Version](https://img.shields.io/pypi/v/googletrends)](https://pypi.org/project/googletrends/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/erdogant/googletrends/blob/master/LICENSE)
 [![Downloads](https://pepy.tech/badge/googletrends/week)](https://pepy.tech/project/googletrends/week)
-[![Donate](https://img.shields.io/badge/donate-grey.svg)](https://erdogant.github.io/donate/?currency=USD&amount=5)
+[![Coffee](https://img.shields.io/badge/donate-grey.svg)](https://erdogant.github.io/donate/?currency=USD&amount=5)
 
-* googletrends is Python package
+* googletrends is Python package to examine trending, spatio and temporal google searching for input queries.
 
-### Contents
+### Contentsa 
 - [Installation](#-installation)
 - [Requirements](#-Requirements)
 - [Quick Start](#-quick-start)
@@ -22,11 +22,10 @@
 * It is distributed under the MIT license.
 
 ### Requirements
-* It is advisable to create a new environment. 
+* A new environment can be created as following if desired. 
 ```python
 conda create -n env_googletrends python=3.6
 conda activate env_googletrends
-pip install -r requirements
 ```
 
 #### Quick Start
@@ -46,15 +45,91 @@ python setup.py install
 import googletrends as googletrends
 ```
 
-#### Example:
+#### Examine google searches over time.
+
+In this example multiple searchwords are examined for multiple countries over time.
+Countries can be in the form of their abbrevation or country name.
+The until date is not given and automatically set on today.
+
 ```python
-df = pd.read_csv('https://github.com/erdogant/hnet/blob/master/googletrends/data/example_data.csv')
-model = googletrends.fit(df)
-G = googletrends.plot(model)
+# Gather temporal searches
+results = googletrends.temporal(['corona','covid-19','virus'], geo=['NL','DE','italy','ES','BE'], date_start='01-01-2020')
+
+# Make plot
+googletrends.plot(results)
+```
+
+#### Color and make different subgroups for the results.
+
+```python
+googletrends.plot(results, color_by_searchword=False, group_by_searchword=False)
 ```
 <p align="center">
   <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/fig1.png" width="600" />
-  
+</p>
+
+```python
+googletrends.plot(results, color_by_searchword=True, group_by_searchword=False)
+```
+<p align="center">
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/fig2.png" width="600" />
+</p>
+
+```python
+googletrends.plot(results, color_by_searchword=False, group_by_searchword=True)
+```
+<p align="center">
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/fig3.png" width="600" />
+</p>
+
+
+```python
+googletrends.plot(results, color_by_searchword=True, group_by_searchword=True)
+```
+<p align="center">
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/fig4.png" width="600" />
+</p>
+
+
+#### Examine google searches over geographical locations.
+
+In this example multiple searchwords are examined for multiple geographical locations.
+All frequencies are summarized into one value between the start-stop date.
+Countries can be in the form of their abbrevation or country name.
+
+```python
+# Gather searches over geographical locations
+results = googletrends.spatio(['corona','covid-19','virus'], geo=['NL','DE','italy','ES','BE'], date_start='01-01-2020')
+
+# Make plot
+googletrends.plot(results)
+```
+<p align="center">
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/fig_spatio_1.png" width="600" />
+</p>
+
+```python
+# Make worldmap plot
+googletrends.plot_worldmap(results)
+```
+<p align="center">
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/fig_spatio_2.png" width="600" />
+</p>
+
+#### Examine trending searches.
+
+In this example multiple searchwords at multiple geographical locations are examined for trending searches.
+All frequencies are summarized into one value between the start-stop date.
+
+```python
+# Gather searches over geographical locations
+results = googletrends.trending(['corona','covid-19','virus'], geo=['NL','DE','italy','ES','BE'], date_start='01-01-2020')
+
+# Make plot
+googletrends.plot(results)
+```
+<p align="center">
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/fig_trending.png" width="600" />
 </p>
 
 
@@ -81,6 +156,6 @@ Please cite googletrends in your publications if this is useful for your researc
 #### Licence
 See [LICENSE](LICENSE) for details.
 
-#### Donation
-* This work is created and maintained in my free time. Contributions of any kind are very appreciated. <a href="https://erdogant.github.io/donate/?currency=USD&amount=5">Sponsering</a> is also possible.
+#### Coffee
+* This work is created and maintained in my free time. If you wish to buy me a coffee for this work, it is very appreciated. <a href="https://erdogant.github.io/donate/?currency=USD&amount=5">Coffee</a>.
 
