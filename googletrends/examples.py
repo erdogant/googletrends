@@ -4,18 +4,40 @@ print(dir(googletrends))
 print(googletrends.__version__)
 
 
-# %% World
-searchwords=['corona','covid-19']
-geo='world'
-date_start='01-12-2019'
+# %% Gather temporal searches
+results = googletrends.temporal(['corona','covid-19'], geo=['NL','DE','italy','BE'], date_start='01-01-2020')
+# Make plot
+googletrends.plot(results)
 
-# geo = ['nl','se','sg']
-results_spatio = googletrends.spatio(searchwords, geo=geo, date_start=date_start)
-googletrends.plot(results_spatio)
+# %% Color and make different subgroups for the results.
+googletrends.plot(results, color_by_searchword=False, group_by_searchword=False)
+googletrends.plot(results, color_by_searchword=True, group_by_searchword=False)
+googletrends.plot(results, color_by_searchword=False, group_by_searchword=True)
+googletrends.plot(results, color_by_searchword=True, group_by_searchword=True)
+
+# %% Gather searches over geographical locations
+results = googletrends.spatio(['corona','covid-19'], geo=['NL','DE','italy','BE'], date_start='01-01-2020')
+# Make plot
+googletrends.plot(results)
+
+# %% Make worldmap plot
+googletrends.plot_worldmap(results)
+
+# %% Gather searches over geographical locations
+results = googletrends.trending(['corona','covid-19'], geo=['NL','DE','italy','ES','BE'], date_start='01-01-2020')
+# Make plot
+googletrends.plot(results)
+
+# %% Results across all countries
+results = googletrends.spatio(['corona','covid-19'], geo='world', date_start='01-01-2020')
+# Make plot
 googletrends.plot_worldmap(results_spatio)
 
 
-# %%
+
+
+
+# %% ----------------------------------------------------------------------
 searchwords=['corona','covid-19','virus']
 geo=['NL','DE','italy','ES','BE']
 # searchwords=['Rijkswaterstaat','NFI']

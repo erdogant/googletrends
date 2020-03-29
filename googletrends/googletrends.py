@@ -190,15 +190,13 @@ def temporal(searchwords, geo=None, date_start=None, date_stop=None, method='new
     if isinstance(geo, str):
         geo=[geo]
 
-    if verbose>=3:
-        print('[googletrends] Collecting trends over time for geographically: %s' %(geo))
+    if verbose>=3: print('[googletrends] Collecting trends over time for geographically: %s' %(geo))
 
     # Get data range and message
     _, _, date_range = _set_dates(date_start, date_stop, verbose=verbose)
     # Convert to country name to code
     for i in range(0,len(geo)):
-        if len(geo[i])>3:
-            geo[i]=worldmap.county2code(geo[i])[0][0].upper()
+        if len(geo[i])>3: geo[i]=worldmap.county2code(geo[i])[0][0].upper()
 
     # Collect data per searchword
     df_geo = {}
@@ -216,13 +214,16 @@ def temporal(searchwords, geo=None, date_start=None, date_stop=None, method='new
                 if verbose>=2: print('[googletrends] [%s] Failed %s..' %(geo_name, searchword))
 
         # Combine data in 1 dataframe
-        dftmp = pd.concat(dftmp, axis=1)
-        dftmp.reset_index(inplace=True, drop=False)
-        df_geo[geo_name]={}
-        df_geo[geo_name]=dftmp
+        if len(dftmp)>0:
+            dftmp = pd.concat(dftmp, axis=1)
+            dftmp.reset_index(inplace=True, drop=False)
+            df_geo[geo_name]={}
+            df_geo[geo_name]=dftmp
+        else:
+            df_geo = pd.DataFrame()
 
     out = {}
-    out['method'] = 'time_interval'
+    out['method'] = 'temporal'
     out['df'] = df_geo
     out['geo'] = geo
     out['searchwords'] = searchwords
@@ -385,6 +386,10 @@ def plot_temporal(results, figsize='auto', cmap='Set1', color_by_searchword=True
     >>> googletrends.plot_temporal(result)
 
     """
+    if len(results['df'])==0:
+        if verbose>=2: print('[googletrends] No data to plot.')
+        return None, None
+
     fig, ax = None, None
     window=5
     if group_by_searchword:
@@ -393,7 +398,7 @@ def plot_temporal(results, figsize='auto', cmap='Set1', color_by_searchword=True
     else:
         linestyles = ['-']
         linewidths = [1.5]
-
+    
     # Make subplots
     fig, ax, fontsize = _make_plots(results, group_by_searchword, figsize, verbose=verbose)
     # Make colors
@@ -647,7 +652,7 @@ def plot(results, figsize='auto', cmap=['#ff0000'], color_by_searchword=True, gr
         if len(results['geo'])>1:
             plot_worldmap(results, cmap=cmap, showfig=showfig)
 
-    if results['method']=='time_interval':
+    if results['method']=='temporal':
         fig, ax = plot_temporal(results, figsize=figsize, color_by_searchword=color_by_searchword, group_by_searchword=group_by_searchword, verbose=verbose)
 
     if results['method']=='trending':

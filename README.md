@@ -7,10 +7,10 @@
 [![Coffee](https://img.shields.io/badge/donate-grey.svg)](https://erdogant.github.io/donate/?currency=USD&amount=5)
 
 * googletrends is Python package to examine trending, spatio and temporal google searching for input queries.
+* Distributed under the MIT license.
 
 ### Contentsa 
 - [Installation](#-installation)
-- [Requirements](#-Requirements)
 - [Quick Start](#-quick-start)
 - [Contribute](#-contribute)
 - [Citation](#-citation)
@@ -19,17 +19,14 @@
 
 ### Installation
 * Install googletrends from PyPI (recommended). googletrends is compatible with Python 3.6+ and runs on Linux, MacOS X and Windows. 
-* It is distributed under the MIT license.
-
-### Requirements
-* A new environment can be created as following if desired. 
+* A new environment can be created as following: 
 ```python
 conda create -n env_googletrends python=3.6
 conda activate env_googletrends
 ```
 
-#### Quick Start
-```
+Pip install:
+```python
 pip install googletrends
 ```
 
@@ -53,7 +50,7 @@ The until date is not given and automatically set on today.
 
 ```python
 # Gather temporal searches
-results = googletrends.temporal(['corona','covid-19','virus'], geo=['NL','DE','italy','ES','BE'], date_start='01-01-2020')
+results = googletrends.temporal(['corona','covid-19','virus'], geo=['NL','DE','italy','BE'], date_start='01-01-2020')
 
 # Make plot
 googletrends.plot(results)
@@ -99,7 +96,7 @@ Countries can be in the form of their abbrevation or country name.
 
 ```python
 # Gather searches over geographical locations
-results = googletrends.spatio(['corona','covid-19','virus'], geo=['NL','DE','italy','ES','BE'], date_start='01-01-2020')
+results = googletrends.spatio(['corona','covid-19','virus'], geo=['NL','DE','italy','BE'], date_start='01-01-2020')
 
 # Make plot
 googletrends.plot(results)
@@ -123,7 +120,7 @@ All frequencies are summarized into one value between the start-stop date.
 
 ```python
 # Gather searches over geographical locations
-results = googletrends.trending(['corona','covid-19','virus'], geo=['NL','DE','italy','ES','BE'], date_start='01-01-2020')
+results = googletrends.trending(['corona','covid-19','virus'], geo=['NL','DE','italy','BE'], date_start='01-01-2020')
 
 # Make plot
 googletrends.plot(results)
