@@ -131,10 +131,10 @@ googletrends.plot(results)
 </p>
 
 <p align="center">
-  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/Netherlands_total.svg" width="600" />
-  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/Germany_total.svg" width="600" />
-  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/Italy_total.svg" width="600" />
-  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/Belgium_total.svg" width="600" />
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/Netherlands_total.svg"/>
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/Germany_total.svg"/>
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/Italy_total.svg"/>
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/Belgium_total.svg"/>
 </p>
 
 ```python
