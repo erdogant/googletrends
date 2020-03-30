@@ -7,7 +7,14 @@
 [![Donate](https://img.shields.io/badge/donate-grey.svg)](https://erdogant.github.io/donate/?currency=USD&amount=5)
 
 * googletrends is Python package to examine trending, spatio and temporal google searching for input queries.
-* Distributed under the MIT license.
+
+Data is al arround us. Some data is easy to get, others are not. Especially when it comes to what people are "thinking" related to an issue/brand/company can be though. However, the "thinking" process can supported by googling about the subject. So if we know what people are searching for, it can give insights in the "common" thoughts. To make it a bit less creepy, lets not do this on an individual basis. I developed the python package googletrends that allows to easily examine the search results per country/region and/or per time-frame and with(out) a specific keyword.
+
+To demonstrate this, lets examine the google searches for the keywords "Corona" and "Wuhan" in the Netherlands and Italy, starting from December 2019 up to today. If you want to examine other keywords, simply pip install the library.
+
+pip install googletrends
+https://github.com/erdogant/googletrends
+
 
 ### Contentsa 
 - [Installation](#-installation)
