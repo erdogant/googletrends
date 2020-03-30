@@ -124,17 +124,17 @@ results = googletrends.spatio(['corona','covid-19','virus'], geo=['NL','DE','ita
 googletrends.plot(results)
 ```
 <p align="center">
-  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/spatio_BE.png" width="600" />
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/spatio_NL.png" width="600" />
   <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/spatio_DE.png" width="600" />
   <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/spatio_IT.png" width="600" />
-  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/spatio_NL.png" width="600" />
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/spatio_BE.png" width="600" />
 </p>
 
 <p align="center">
-  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/Belgium_total.svg" width="600" />
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/Netherlands_total.svg" width="600" />
   <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/Germany_total.svg" width="600" />
   <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/Italy_total.svg" width="600" />
-  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/Netherlands_total.svg" width="600" />
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/Belgium_total.svg" width="600" />
 </p>
 
 ```python
@@ -159,9 +159,9 @@ googletrends.plot(results)
 ```
 <p align="center">
   <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/trending_NL.png" width="600" />
-  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/trending_BE.png" width="600" />
   <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/trending_DE.png" width="600" />
   <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/trending_IT.png" width="600" />
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/trending_BE.png" width="600" />
 </p>
 
 
