@@ -154,5 +154,5 @@ Please cite googletrends in your publications if this is useful for your researc
 See [LICENSE](LICENSE) for details.
 
 #### Coffee
-* This work is created and maintained in my free time. If you wish to buy me a coffee for this work, it is very appreciated. <a href="https://erdogant.github.io/donate/?currency=USD&amount=5">Coffee</a>.
+* This work is created and maintained in my free time. If you wish to buy me a <a href="https://erdogant.github.io/donate/?currency=USD&amount=5">Coffee</a> for this work, it is very appreciated.
 
