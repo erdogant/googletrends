@@ -80,8 +80,10 @@ def trending(searchwords, geo=None, date_start=None, date_stop=None, method='new
 
     # Convert to country name to code
     for i in range(0,len(geo)):
+        geo[i]=geo[i].upper()
         if len(geo[i])>3:
             geo[i]=worldmap.county2code(geo[i])[0][0].upper()
+
     # Get data range and message
     _, _, date_range = _set_dates(date_start, date_stop, verbose=verbose)
 
@@ -138,6 +140,7 @@ def trending(searchwords, geo=None, date_start=None, date_stop=None, method='new
     out['rising'] = df_rising
     out['top'] = df_top
     out['geo'] = geo
+    out['geo_names'] = list(map(lambda x: worldmap.code2county(x)[1], geo))
     out['searchwords'] = searchwords
     out['date_range'] = date_range
     return(out)
@@ -196,7 +199,9 @@ def temporal(searchwords, geo=None, date_start=None, date_stop=None, method='new
     _, _, date_range = _set_dates(date_start, date_stop, verbose=verbose)
     # Convert to country name to code
     for i in range(0,len(geo)):
-        if len(geo[i])>3: geo[i]=worldmap.county2code(geo[i])[0][0].upper()
+        geo[i]=geo[i].upper()
+        if len(geo[i])>3:
+            geo[i]=worldmap.county2code(geo[i])[0][0].upper()
 
     # Collect data per searchword
     df_geo = {}
@@ -226,6 +231,7 @@ def temporal(searchwords, geo=None, date_start=None, date_stop=None, method='new
     out['method'] = 'temporal'
     out['df'] = df_geo
     out['geo'] = geo
+    out['geo_names'] = list(map(lambda x: worldmap.code2county(x)[1], geo))
     out['searchwords'] = searchwords
     out['date_range'] = date_range
     return(out)
@@ -286,6 +292,7 @@ def spatio(searchwords, geo='', date_start=None, date_stop=None, method='news', 
     _, _, date_range = _set_dates(date_start, date_stop, verbose=verbose)
     # Convert to country name to code
     for i in range(0,len(geo)):
+        geo[i]=geo[i].upper()
         if len(geo[i])>3: geo[i]=worldmap.county2code(geo[i])[0][0].upper()
 
     # Search for searchwords
@@ -298,6 +305,7 @@ def spatio(searchwords, geo='', date_start=None, date_stop=None, method='news', 
     out['date_range'] = date_range
     out['searchwords'] = searchwords
     out['geo'] = geo
+    out['geo_names'] = list(map(lambda x: worldmap.code2county(x)[1], geo))
     # return
     return(out)
 
@@ -329,6 +337,7 @@ def _spatio_per_searchword(searchwords, geo='', date_start=None, date_stop=None,
     out['method'] = 'geo'
     out['df'] = df_city
     out['geo'] = geo
+    out['geo_names'] = worldmap.code2county(geo)[1]
     out['date_range'] = date_range
     out['searchwords'] = searchwords
     return(out)
@@ -450,7 +459,7 @@ def plot_temporal(results, figsize='auto', cmap='Set1', color_by_searchword=True
         ax[i].spines['bottom'].set_visible(False)
         ax[i].spines['left'].set_visible(False)
 
-    ax[0].set_title('Date: ' + results['date_range'][0] + '\nGeographically: ' + ', '.join(results['geo']), fontsize=fontsize)
+    ax[0].set_title('Date: ' + results['date_range'][0] + ', '.join(results['geo_names']), fontsize=fontsize)
 
     return fig, ax
 
@@ -488,7 +497,7 @@ def plot_spatio(results, figsize=(15,8), showfig=True, verbose=3):
     if not results['df'].empty:
         ax = results['df'].plot(kind='bar', stacked=True, figsize=figsize, grid=True)
         ax.set_ylabel('Normalized Google searches')
-        ax.set_title('Date: ' + results['date_range'][0] + '\nGeographically: ' + results['geo'])
+        ax.set_title('Date: ' + results['date_range'][0] + '\nGeographically: ' + results['geo_names'])
         # Plot map
         out_map = _plot_map(results, showfig=showfig)
     # Return

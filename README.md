@@ -15,6 +15,10 @@ To demonstrate this, lets examine the google searches for the keywords "Corona" 
 pip install googletrends
 https://github.com/erdogant/googletrends
 
+<p align="center">
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/summary.png" width="600" />
+</p>
+
 
 ### Contentsa 
 - [Installation](#-installation)
