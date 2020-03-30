@@ -16,7 +16,7 @@ pip install googletrends
 https://github.com/erdogant/googletrends
 
 <p align="center">
-  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/summary.png" width="600" />
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/summary.png" width="1000" />
 </p>
 
 
