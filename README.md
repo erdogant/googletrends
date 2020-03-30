@@ -22,7 +22,6 @@ https://github.com/erdogant/googletrends
 
 ### Contentsa 
 - [Installation](#-installation)
-- [Quick Start](#-quick-start)
 - [Contribute](#-contribute)
 - [Citation](#-citation)
 - [Maintainers](#-maintainers)
