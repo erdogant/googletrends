@@ -52,6 +52,28 @@ python setup.py install
 import googletrends as googletrends
 ```
 
+#### Get country names and abbrevations.
+
+```python
+geo_names = googletrends.get_geo_names()
+print(geo_names)
+
+#     code               country
+# 0     AD               andorra
+# 1     AE  united arab emirates
+# 2     AF           afghanistan
+# 3     AR             argentina
+# 4     AO                angola
+# ..   ...                   ...
+# 251   YE                 yemen
+# 252   YT               mayotte
+# 253   ZA          south africa
+# 254   ZM                zambia
+# 255   ZW              zimbabwe
+
+```
+
+
 #### Examine google searches over time.
 
 In this example multiple searchwords are examined for multiple countries over time.
