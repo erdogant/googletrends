@@ -52,8 +52,30 @@ The until date is not given and automatically set on today.
 # Gather temporal searches
 results = googletrends.temporal(['corona','covid-19','virus'], geo=['NL','DE','italy','BE'], date_start='01-01-2020')
 
-# Make plot
+# Make plot using default settings
 googletrends.plot(results)
+```
+
+Progress looks like this:
+
+```python
+# [googletrends] Collecting trends over time for geographically: ['NL', 'DE', 'italy', 'BE']
+# [googletrends] 01 January 2020 - 30 March 2020
+# [worldmap] Downloading resources..
+# [worldmap.extract] Warning: Directory with maps does not exist: .\worldmap\worldmap\data\SVG_MAPS
+# [EXTRACT FILES] Directory already exists and will be used: .\worldmap\worldmap\data
+# [EXTRACT FILES] Extracting SVG_MAPS.zip..
+# 100%|██████████| 1/1 [00:00<00:00,  9.12it/s]
+# [EXTRACT FILES] Done!
+# [googletrends] [NL] Working on corona..
+
+# [googletrends] [NL] Working on covid-19..
+# [googletrends] [DE] Working on corona..
+# [googletrends] [DE] Working on covid-19..
+# [googletrends] [IT] Working on corona..
+# [googletrends] [IT] Working on covid-19..
+# [googletrends] [BE] Working on corona..
+# [googletrends] [BE] Working on covid-19..
 ```
 
 #### Color and make different subgroups for the results.
@@ -102,7 +124,17 @@ results = googletrends.spatio(['corona','covid-19','virus'], geo=['NL','DE','ita
 googletrends.plot(results)
 ```
 <p align="center">
-  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/fig_spatio_1.png" width="600" />
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/spatio_BE.png" width="600" />
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/spatio_DE.png" width="600" />
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/spatio_IT.png" width="600" />
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/spatio_NL.png" width="600" />
+</p>
+
+<p align="center">
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/Belgium_total.svg" width="600" />
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/Germany_total.svg" width="600" />
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/Italy_total.svg" width="600" />
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/Netherlands_total.svg" width="600" />
 </p>
 
 ```python
@@ -110,7 +142,7 @@ googletrends.plot(results)
 googletrends.plot_worldmap(results)
 ```
 <p align="center">
-  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/fig_spatio_2.png" width="600" />
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/total_worldmap.svg" width="600" />
 </p>
 
 #### Examine trending searches.
@@ -126,7 +158,10 @@ results = googletrends.trending(['corona','covid-19','virus'], geo=['NL','DE','i
 googletrends.plot(results)
 ```
 <p align="center">
-  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/fig_trending.png" width="600" />
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/trending_NL.png" width="600" />
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/trending_BE.png" width="600" />
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/trending_DE.png" width="600" />
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/trending_IT.png" width="600" />
 </p>
 
 

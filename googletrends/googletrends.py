@@ -568,7 +568,7 @@ def plot_trending(results, figsize=(15,20), cmap='Set1', verbose=3):
                     ax[fignum].spines['left'].set_visible(False)
                     ax[fignum].set_xticks([])
                     ax[fignum].set_yticks([])
-                    ax[fignum].set_title(('Top searches' + keys[i] + '\nDate: ' + results['date_range'][0]), fontsize=fontsize)
+                    ax[fignum].set_title(('Top searches ' + keys[i] + '\n' + results['date_range'][0]), fontsize=fontsize)
                     ax[fignum].set_xlabel('')
                     fignum=fignum + 1
                 except:
@@ -735,7 +735,7 @@ def _plot_map(results, figsize=(15,8), cmap=['#ff0000'], showfig=True, verbose=3
             # county_names = results['df'].iloc[idx,i].index.values
             county_names = idx_names[idx]
             opacity = data[idx,i]
-            filename = colnames[i] + '.svg'
+            filename = map_name + '_' + colnames[i] + '.svg'
 
             # If no data, set all on black
             if len(county_names)==0:
