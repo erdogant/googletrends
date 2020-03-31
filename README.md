@@ -156,12 +156,12 @@ results = googletrends.spatio(['corona','covid-19','virus'], geo=['NL','DE','ita
 googletrends.plot(results)
 ```
 <p align="center">
-  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/spatio_NL.png" width="300" />
-  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/spatio_DE.png" width="300" />
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/spatio_NL.png" width="400" />
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/spatio_DE.png" width="400" />
 </p>
 <p align="center">
-  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/spatio_IT.png" width="300" />
-  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/spatio_BE.png" width="300" />
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/spatio_IT.png" width="400" />
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/spatio_BE.png" width="400" />
 </p>
 
 <p align="center">
