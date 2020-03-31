@@ -191,10 +191,12 @@ results = googletrends.trending(['corona','covid-19','virus'], geo=['NL','DE','i
 googletrends.plot(results)
 ```
 <p align="center">
-  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/trending_NL.png" width="600" />
-  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/trending_DE.png" width="600" />
-  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/trending_IT.png" width="600" />
-  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/trending_BE.png" width="600" />
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/trending_NL.png" width="400" />
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/trending_DE.png" width="400" />
+</p>
+<p align="center">
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/trending_IT.png" width="400" />
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/trending_BE.png" width="400" />
 </p>
 
 
