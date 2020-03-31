@@ -227,9 +227,7 @@ Please cite googletrends in your publications if this is useful for your researc
 }
 ```
 
-#### References
-* http://www.w3.org/Consortium/Legal/copyright-software
-
+* References: http://www.w3.org/Consortium/Legal/copyright-software
 * Maintainers: Erdogan Taskesen, github: [erdogant](https://github.com/erdogant)
 * Contributions are welcome.
 * Licence [LICENSE](LICENSE).
