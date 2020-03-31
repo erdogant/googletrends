@@ -156,17 +156,18 @@ results = googletrends.spatio(['corona','covid-19','virus'], geo=['NL','DE','ita
 googletrends.plot(results)
 ```
 <p align="center">
-  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/spatio_NL.png" width="600" />
-  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/spatio_DE.png" width="600" />
-  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/spatio_IT.png" width="600" />
-  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/spatio_BE.png" width="600" />
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/spatio_NL.png" width="300" />
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/spatio_DE.png" width="300" />
+</p>
+<p align="center">
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/spatio_IT.png" width="300" />
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/spatio_BE.png" width="300" />
 </p>
 
 <p align="center">
-  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/Netherlands_total.png" width="300"/>
-  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/Germany_total.png" width="300"/>
-  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/Italy_total.png" width="300"/>
-  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/Belgium_total.png" width="300"/>
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/Netherlands_total.png" width="250"/>
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/Germany_total.png" width="250"/>
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/Italy_total.png" width="250"/>
 </p>
 
 ```python
