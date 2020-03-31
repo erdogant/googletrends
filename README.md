@@ -163,10 +163,10 @@ googletrends.plot(results)
 </p>
 
 <p align="center">
-  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/Netherlands_total.svg"/>
-  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/Germany_total.svg"/>
-  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/Italy_total.svg"/>
-  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/Belgium_total.svg"/>
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/Netherlands_total.png"/>
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/Germany_total.png"/>
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/Italy_total.png"/>
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/Belgium_total.png"/>
 </p>
 
 ```python
@@ -174,7 +174,7 @@ googletrends.plot(results)
 googletrends.plot_worldmap(results)
 ```
 <p align="center">
-  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/total_worldmap.svg" width="600" />
+  <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/total_worldmap.png" width="600" />
 </p>
 
 #### Examine trending searches.
