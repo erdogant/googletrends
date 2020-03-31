@@ -17,12 +17,12 @@ To demonstrate this, lets examine the google searches for the keywords "Corona" 
 </p>
 
 
-### Contentsa 
+### Content
 - [Installation](#-installation)
+- [Examples](#-installation)
 - [Contribute](#-contribute)
 - [Citation](#-citation)
 - [Maintainers](#-maintainers)
-- [License](#-copyright)
 
 ### Installation
 * Install googletrends from PyPI (recommended). googletrends is compatible with Python 3.6+ and runs on Linux, MacOS X and Windows. 
