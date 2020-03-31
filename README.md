@@ -190,12 +190,28 @@ results = googletrends.trending(['corona','covid-19','virus'], geo=['NL','DE','i
 # Make plot
 googletrends.plot(results)
 ```
+
+Trending searchwords in the Netherlands
+
 <p align="center">
   <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/trending_NL.png" width="500" />
+</p>
+
+Trending searchwords in Germany
+
+<p align="center">
   <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/trending_DE.png" width="500" />
 </p>
+
+Trending searchwords in Italy
+
 <p align="center">
   <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/trending_IT.png" width="500" />
+</p>
+
+Trending searchwords in Belgium
+
+<p align="center">
   <img src="https://github.com/erdogant/googletrends/blob/master/docs/figs/trending_BE.png" width="500" />
 </p>
 
