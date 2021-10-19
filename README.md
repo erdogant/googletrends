@@ -3,8 +3,13 @@
 [![Python](https://img.shields.io/pypi/pyversions/googletrends)](https://img.shields.io/pypi/pyversions/googletrends)
 [![PyPI Version](https://img.shields.io/pypi/v/googletrends)](https://pypi.org/project/googletrends/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/erdogant/googletrends/blob/master/LICENSE)
+[![Github Forks](https://img.shields.io/github/forks/erdogant/googletrends.svg)](https://github.com/erdogant/googletrends/network)
+[![GitHub Open Issues](https://img.shields.io/github/issues/erdogant/googletrends.svg)](https://github.com/erdogant/googletrends/issues)
+[![Project Status](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
+[![Downloads](https://pepy.tech/badge/googletrends/month)](https://pepy.tech/project/googletrends/month)
 [![Downloads](https://pepy.tech/badge/googletrends)](https://pepy.tech/project/googletrends)
-[![Coffee](https://img.shields.io/badge/coffee-black-grey.svg)](https://erdogant.github.io/donate/?currency=USD&amount=5)
+[![BuyMeCoffee](https://img.shields.io/badge/buymea-coffee-yellow.svg)](https://www.buymeacoffee.com/erdogant)
+<!---[![Coffee](https://img.shields.io/badge/coffee-black-grey.svg)](https://erdogant.github.io/donate/?currency=USD&amount=5)-->
 
 * googletrends is Python package to examine trending, spatio and temporal google searching for input queries.
 
@@ -224,9 +229,16 @@ Please cite googletrends in your publications if this is useful for your researc
 }
 ```
 
-* References: http://www.w3.org/Consortium/Legal/copyright-software
+### References
+* http://www.w3.org/Consortium/Legal/copyright-software
 
-### Maintainer
+### Maintainers
 * Erdogan Taskesen, github: [erdogant](https://github.com/erdogant)
-* Contributions are welcome.
-* If you wish to buy me a <a href="https://erdogant.github.io/donate/?currency=USD&amount=5">Coffee</a> for this work, it is very appreciated :)
+
+### Contribute
+* All kinds of contributions are welcome!
+* If you wish to buy me a <a href="https://www.buymeacoffee.com/erdogant">Coffee</a> for this work, it is very appreciated :)
+
+### Licence
+See [LICENSE](LICENSE) for details.
+
