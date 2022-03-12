@@ -22,7 +22,7 @@ setuptools.setup(
      description="Python package to examine trending, spatio and temporal google searching for input queries.",
      long_description=long_description,
      long_description_content_type="text/markdown",
-     url="https://github.com/erdogant/googletrends",
+     url="https://erdogant.github.io/googletrends",
 	 download_url = 'https://github.com/erdogant/googletrends/archive/'+new_version+'.tar.gz',
      packages=setuptools.find_packages(), # Searches throughout all dirs for files to include
      include_package_data=True, # Must be true to include files depicted in MANIFEST.in
