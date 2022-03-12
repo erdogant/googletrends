@@ -103,8 +103,7 @@ Let's see what happens if use other groupings and coloring.
 Analyze Geographical
 ####################################
 
-In this example multiple searchwords are examined across multiple countries. The input for a country can be in the form of the abbrevation or country name. If the **until date** is not given, it will be set on today.
-
+In this example multiple searchwords are examined across multiple countries. The input for a country can be in the form of the abbrevation or country name. All frequencies are summarized into one value between the start-stop date.
 
 .. code:: python
 
@@ -152,7 +151,8 @@ In this example multiple searchwords are examined across multiple countries. The
 Analyze Trends
 ####################################
 
-In this example multiple searchwords are examined across multiple countries. The input for a country can be in the form of the abbrevation or country name. If the **until date** is not given, it will be set on today.
+In this example multiple searchwords at multiple geographical locations are examined for trending searches.
+All frequencies are summarized into one value between the start-stop date.
 
 
 .. code:: python
