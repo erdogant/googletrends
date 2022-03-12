@@ -4,7 +4,7 @@ from googletrends.googletrends import (
     plot_trending,
     plot_spatio,
     plot_temporal,
-	spatio,
+    spatio,
     temporal,
     trending,
     get_geo_names,
