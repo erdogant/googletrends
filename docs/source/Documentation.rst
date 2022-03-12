@@ -19,17 +19,6 @@ Github
 
 
 
-Colab Notebook
-################
-
-.. note::
-	Experiment with ``googletrends`` library using the `Colab notebook`_.
-
-.. _Colab notebook: https://colab.research.google.com/github/erdogant/googletrends/blob/master/notebooks/googletrends.ipynb
-
-
-
-
 .. raw:: html
 
 	<hr>
