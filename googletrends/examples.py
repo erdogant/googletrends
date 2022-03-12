@@ -7,7 +7,7 @@ geo_names = googletrends.get_geo_names()
 # %% Linked-in example
 # searchwords = ['corona', 'covid', 'Wuhan']
 searchwords = ['bitcoin', 'ethereum']
-geo = ['NL', 'united states']
+geo = ['NL', 'united kingdom']
 date_start = '01-12-2012'
 
 # Temporal
@@ -28,8 +28,8 @@ results = googletrends.temporal(['corona','covid-19'], geo=['NL','DE','italy','B
 googletrends.plot(results)
 
 # %% Color and make different subgroups for the results.
-googletrends.plot(results, color_by_searchword=False, group_by_searchword=False)
 googletrends.plot(results, color_by_searchword=True, group_by_searchword=False)
+googletrends.plot(results, color_by_searchword=False, group_by_searchword=False)
 googletrends.plot(results, color_by_searchword=False, group_by_searchword=True)
 googletrends.plot(results, color_by_searchword=True, group_by_searchword=True)
 
