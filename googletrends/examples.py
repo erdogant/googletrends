@@ -5,13 +5,14 @@ import googletrends as googletrends
 geo_names = googletrends.get_geo_names()
 
 # %% Linked-in example
-searchwords = ['corona','covid-19','Wuhan']
-geo = ['NL','italy']
-date_start = '01-12-2019'
+# searchwords = ['corona', 'covid', 'Wuhan']
+searchwords = ['bitcoin', 'ethereum']
+geo = ['NL', 'united states']
+date_start = '01-12-2012'
 
 # Temporal
-results_temp = googletrends.temporal(searchwords, geo=geo, date_start=date_start)
-googletrends.plot(results_temp, color_by_searchword=True, group_by_searchword=False)
+results = googletrends.temporal(searchwords, geo=geo, date_start=date_start)
+googletrends.plot(results, color_by_searchword=True, group_by_searchword=False)
 
 #  spatio
 results_spatio = googletrends.spatio(searchwords, geo=geo, date_start=date_start)
