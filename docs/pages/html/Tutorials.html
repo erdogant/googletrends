@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Input/Output &mdash; googletrends googletrends documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Get country names and abbrevations" href="Examples.html" />
+    <link rel="prev" title="Installation" href="Installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> googletrends
+          </a>
+              <div class="version">
+                0.1.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+    
+              <p class="caption" role="heading"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html#uninstalling">Uninstalling</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Input/Output</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-googletrends.googletrends.temporal">Search Timewise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-googletrends.googletrends.spatio">Search Geographically</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-googletrends.googletrends.trending">Search Trending</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#description">Description</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Examples.html">Get country names and abbrevations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples.html#analyze-timewise">Analyze Timewise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples.html#analyze-timewise-with-groupby">Analyze Timewise with groupby</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples.html#analyze-geographical">Analyze Geographical</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples.html#analyze-trends">Analyze Trends</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Documentation.html">Sponsor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Documentation.html#github">Github</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Documentation.html#colab-notebook">Colab Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Coding%20quality.html">Coding quality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="googletrends.googletrends.html">API References</a></li>
+</ul>
+
+    <a href= "genindex.html">Index</a>
+  
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">googletrends</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Input/Output</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Tutorials.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="input-output">
+<h1>Input/Output<a class="headerlink" href="#input-output" title="Permalink to this headline"></a></h1>
+<section id="module-googletrends.googletrends.temporal">
+<span id="search-timewise"></span><h2>Search Timewise<a class="headerlink" href="#module-googletrends.googletrends.temporal" title="Permalink to this headline"></a></h2>
+<p>Gather data for google searches over time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">param searchwords</dt>
+<dd class="field-odd"><p>Lookup each input word and return the (normalized) frequency of google searches.
+Example: [‘Corona’,’earth quake’]</p>
+</dd>
+<dt class="field-even">type searchwords</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+<dt class="field-odd">param geo</dt>
+<dd class="field-odd"><p>Filter on geographical locations.
+‘NL’ (only netherlands)
+[‘NL’,’germany’,’IT’]</p>
+</dd>
+<dt class="field-even">type geo</dt>
+<dd class="field-even"><p>list, optional</p>
+</dd>
+<dt class="field-odd">param date_start</dt>
+<dd class="field-odd"><p>String: Start date for counting.</p>
+</dd>
+<dt class="field-even">type date_start</dt>
+<dd class="field-even"><p>str [dd-mm-yyyy]</p>
+</dd>
+<dt class="field-odd">param date_stop</dt>
+<dd class="field-odd"><p>String: Stop date for counting. If nothing is filled in, date of today is used.</p>
+</dd>
+<dt class="field-even">type date_stop</dt>
+<dd class="field-even"><p>str [dd-mm-yyyy], optional</p>
+</dd>
+<dt class="field-odd">param method</dt>
+<dd class="field-odd"><p>Type of google search. The default is ‘news’.
+Choose on of those: ‘images’,’news’,’youtube’,’froogle’</p>
+</dd>
+<dt class="field-even">type method</dt>
+<dd class="field-even"><p>str, optional</p>
+</dd>
+<dt class="field-odd">param verbose</dt>
+<dd class="field-odd"><p>Print message to screen. The default is 3.</p>
+</dd>
+<dt class="field-even">type verbose</dt>
+<dd class="field-even"><p>int, optional</p>
+</dd>
+<dt class="field-odd">raises Exception</dt>
+<dd class="field-odd"><p>code 429: Too Many google requests in a given amount of time (“rate limiting”).</p>
+</dd>
+<dt class="field-even">returns</dt>
+<dd class="field-even"><ul class="simple">
+<li><p>method (str) : Type of method.</p></li>
+<li><p>dict of dataframes  : Per country the counts for searchwords.</p></li>
+<li><p>geo (list): The abrevations of the country names.</p></li>
+<li><p>geo_names (list): The full name of hte countries.</p></li>
+<li><p>searchwords (list): The input searchwords.</p></li>
+<li><p>date_range (str): The date: [from To].</p></li>
+</ul>
+</dd>
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p>dict containing results.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">googletrends</span><span class="o">.</span><span class="n">temporal</span><span class="p">([</span><span class="s1">&#39;bitcoin&#39;</span><span class="p">,</span><span class="s1">&#39;ethereum&#39;</span><span class="p">],</span> <span class="n">geo</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;nl&#39;</span><span class="p">,</span> <span class="s1">&#39;united states&#39;</span><span class="p">],</span> <span class="n">date_start</span><span class="o">=</span><span class="s1">&#39;01-12-2019&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">googletrends</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="module-googletrends.googletrends.spatio">
+<span id="search-geographically"></span><h2>Search Geographically<a class="headerlink" href="#module-googletrends.googletrends.spatio" title="Permalink to this headline"></a></h2>
+<p>Gather data for google searches over geographical locations and time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">param searchwords</dt>
+<dd class="field-odd"><p>Lookup each input word and return the (normalized) frequency of google searches.
+Example: [‘Corona’,’earth quake’]</p>
+</dd>
+<dt class="field-even">type searchwords</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+<dt class="field-odd">param geo</dt>
+<dd class="field-odd"><p>Filter on geographical locations.
+‘NL’ (only netherlands)
+[‘NL’,’germany’,’IT’]</p>
+</dd>
+<dt class="field-even">type geo</dt>
+<dd class="field-even"><p>list, optional</p>
+</dd>
+<dt class="field-odd">param date_start</dt>
+<dd class="field-odd"><p>String: Start date for counting.</p>
+</dd>
+<dt class="field-even">type date_start</dt>
+<dd class="field-even"><p>str [dd-mm-yyyy]</p>
+</dd>
+<dt class="field-odd">param date_stop</dt>
+<dd class="field-odd"><p>String: Stop date for counting. If nothing is filled in, date of today is used.</p>
+</dd>
+<dt class="field-even">type date_stop</dt>
+<dd class="field-even"><p>str [dd-mm-yyyy], optional</p>
+</dd>
+<dt class="field-odd">param method</dt>
+<dd class="field-odd"><p>Type of google search. The default is ‘news’.
+Choose on of those: ‘images’,’news’,’youtube’,’froogle’</p>
+</dd>
+<dt class="field-even">type method</dt>
+<dd class="field-even"><p>str, optional</p>
+</dd>
+<dt class="field-odd">param include_suggestions</dt>
+<dd class="field-odd"><p>Include suggestions. The default is False.</p>
+</dd>
+<dt class="field-even">type include_suggestions</dt>
+<dd class="field-even"><p>bool, optional</p>
+</dd>
+<dt class="field-odd">param verbose</dt>
+<dd class="field-odd"><p>Print message to screen. The default is 3.</p>
+</dd>
+<dt class="field-even">type verbose</dt>
+<dd class="field-even"><p>int, optional</p>
+</dd>
+<dt class="field-odd">raises Exception</dt>
+<dd class="field-odd"><p>code 429: Too Many google requests in a given amount of time (“rate limiting”).</p>
+</dd>
+<dt class="field-even">returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>Each input country has the following keys:</dt><dd><ul class="simple">
+<li><p>method (str) : Type of method.</p></li>
+<li><p>dict of dataframes  : Per country the counts for searchwords.</p></li>
+<li><p>geo (list): The abrevations of the country names.</p></li>
+<li><p>geo_names (list): The full name of the countries.</p></li>
+<li><p>searchwords (list): The input searchwords.</p></li>
+<li><p>date_range (str): The date: [from To].</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p>dict containing results.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">googletrends</span><span class="o">.</span><span class="n">spatio</span><span class="p">([</span><span class="s1">&#39;bitcoin&#39;</span><span class="p">,</span><span class="s1">&#39;ethereum&#39;</span><span class="p">],</span> <span class="n">geo</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;nl&#39;</span><span class="p">,</span><span class="s1">&#39;italy&#39;</span><span class="p">],</span> <span class="n">date_start</span><span class="o">=</span><span class="s1">&#39;01-12-2012&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">googletrends</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="module-googletrends.googletrends.trending">
+<span id="search-trending"></span><h2>Search Trending<a class="headerlink" href="#module-googletrends.googletrends.trending" title="Permalink to this headline"></a></h2>
+<p>Trending google searches.</p>
+<section id="description">
+<h3>Description<a class="headerlink" href="#description" title="Permalink to this headline"></a></h3>
+<p>If you choose a time period that is 3 months or shorter you get daily data, otherwise you get weekly data.
+If the time period is 3 years or longer, the monthly data is plotted, otherwise it is weekly data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">param searchwords</dt>
+<dd class="field-odd"><p>Lookup each input word and return the (normalized) frequency of google searches.
+Example: [‘Corona’,’earth quake’]</p>
+</dd>
+<dt class="field-even">type searchwords</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+<dt class="field-odd">param geo</dt>
+<dd class="field-odd"><p>Filter on geographical locations.
+‘NL’ (only netherlands),
+[‘NL’,’germany’,’IT’],
+‘world’ to examine all countries</p>
+</dd>
+<dt class="field-even">type geo</dt>
+<dd class="field-even"><p>list, optional</p>
+</dd>
+<dt class="field-odd">param date_start</dt>
+<dd class="field-odd"><p>String: Start date for counting.</p>
+</dd>
+<dt class="field-even">type date_start</dt>
+<dd class="field-even"><p>str [dd-mm-yyyy]</p>
+</dd>
+<dt class="field-odd">param date_stop</dt>
+<dd class="field-odd"><p>String: Stop date for counting. If nothing is filled in, date of today is used.</p>
+</dd>
+<dt class="field-even">type date_stop</dt>
+<dd class="field-even"><p>str [dd-mm-yyyy], optional</p>
+</dd>
+<dt class="field-odd">param method</dt>
+<dd class="field-odd"><p>Type of google search. The default is ‘news’.
+Choose on of those: ‘images’,’news’,’youtube’,’froogle’</p>
+</dd>
+<dt class="field-even">type method</dt>
+<dd class="field-even"><p>str, optional</p>
+</dd>
+<dt class="field-odd">param verbose</dt>
+<dd class="field-odd"><p>Print message to screen. The default is 3.</p>
+</dd>
+<dt class="field-even">type verbose</dt>
+<dd class="field-even"><p>int, optional</p>
+</dd>
+<dt class="field-odd">raises Exception</dt>
+<dd class="field-odd"><p>code 429: Too Many google requests in a given amount of time (“rate limiting”).</p>
+</dd>
+<dt class="field-even">rtype</dt>
+<dd class="field-even"><p>dict containing results.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">googletrends</span><span class="o">.</span><span class="n">spatio</span><span class="p">([</span><span class="s1">&#39;bitcoin&#39;</span><span class="p">,</span><span class="s1">&#39;ethereum&#39;</span><span class="p">],</span> <span class="n">geo</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;nl&#39;</span><span class="p">,</span><span class="s1">&#39;italy&#39;</span><span class="p">],</span> <span class="n">date_start</span><span class="o">=</span><span class="s1">&#39;01-12-2012&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">googletrends</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Plot only on the worldmap</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">googletrends</span><span class="o">.</span><span class="n">plot_worldmap</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<hr>
+<center>
+        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CEADP27U&placement=erdogantgithubio" id="_carbonads_js"></script>
+</center>
+<hr></section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Examples.html" class="btn btn-neutral float-right" title="Get country names and abbrevations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Erdogan Taskesen.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

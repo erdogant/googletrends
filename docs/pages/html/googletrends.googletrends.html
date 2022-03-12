@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API References &mdash; googletrends googletrends documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Coding quality" href="Coding%20quality.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> googletrends
+          </a>
+              <div class="version">
+                0.1.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+    
+              <p class="caption" role="heading"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html#uninstalling">Uninstalling</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Tutorials.html">Input/Output</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Examples.html">Get country names and abbrevations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples.html#analyze-timewise">Analyze Timewise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples.html#analyze-timewise-with-groupby">Analyze Timewise with groupby</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples.html#analyze-geographical">Analyze Geographical</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples.html#analyze-trends">Analyze Trends</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Documentation.html">Sponsor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Documentation.html#github">Github</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Documentation.html#colab-notebook">Colab Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Coding%20quality.html">Coding quality</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API References</a></li>
+</ul>
+
+    <a href= "genindex.html">Index</a>
+  
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">googletrends</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>API References</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/googletrends.googletrends.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-googletrends.googletrends">
+<span id="api-references"></span><h1>API References<a class="headerlink" href="#module-googletrends.googletrends" title="Permalink to this headline"></a></h1>
+<p>Python package to examine trending, spatio and temporal google searching for input queries.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="googletrends.googletrends.get_geo_names">
+<span class="sig-prename descclassname"><span class="pre">googletrends.googletrends.</span></span><span class="sig-name descname"><span class="pre">get_geo_names</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'https://erdogant.github.io/datasets/country_and_code.zip'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googletrends.googletrends.get_geo_names" title="Permalink to this definition"></a></dt>
+<dd><p>Import dataset from github.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>url</strong> (<em>str</em>) – url-Link to dataset.</p></li>
+<li><p><strong>verbose</strong> (<em>int</em><em>, </em><em>optional</em>) – Print message to screen. The default is 3.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>tuple containing import status and resources.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="googletrends.googletrends.plot">
+<span class="sig-prename descclassname"><span class="pre">googletrends.googletrends.</span></span><span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">results</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'auto'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['#ff0000']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color_by_searchword</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_by_searchword</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showfig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googletrends.googletrends.plot" title="Permalink to this definition"></a></dt>
+<dd><p>Plot results generated by trending, spatio or temporal.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>results</strong> (<em>dict</em>) – results are derived from the temporal() function.</p></li>
+<li><p><strong>figsize</strong> (<em>tuple</em><em>, </em><em>optional</em>) – Figure size (height, width). The default is ‘auto’.</p></li>
+<li><p><strong>cmap</strong> (<em>str</em><em>, </em><em>optional</em>) – colormap. The default is ‘Set1’.</p></li>
+<li><p><strong>color_by_searchword</strong> (<em>bool</em><em>, </em><em>optional</em>) – Color lines by searchwords. The default is True.</p></li>
+<li><p><strong>group_by_searchword</strong> (<em>TYPE</em><em>, </em><em>optional</em>) – Make subplots based on searchwords. The default is False.</p></li>
+<li><p><strong>showfig</strong> (<em>bool</em><em>, </em><em>optional</em>) – When True, auto open the map figures in your browser. The default is ‘True’.</p></li>
+<li><p><strong>verbose</strong> (<em>int</em><em>, </em><em>optional</em>) – Print message to screen. The default is 3.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Trending results</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">googletrends</span><span class="o">.</span><span class="n">trending</span><span class="p">([</span><span class="s1">&#39;corona&#39;</span><span class="p">,</span><span class="s1">&#39;covid-19&#39;</span><span class="p">],</span> <span class="n">geo</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;nl&#39;</span><span class="p">,</span><span class="s1">&#39;italy&#39;</span><span class="p">],</span> <span class="n">date_start</span><span class="o">=</span><span class="s1">&#39;01-12-2019&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">googletrends</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Results on geogrpahical locations</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">googletrends</span><span class="o">.</span><span class="n">spatio</span><span class="p">([</span><span class="s1">&#39;corona&#39;</span><span class="p">,</span><span class="s1">&#39;covid-19&#39;</span><span class="p">],</span> <span class="n">geo</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;nl&#39;</span><span class="p">,</span><span class="s1">&#39;italy&#39;</span><span class="p">],</span> <span class="n">date_start</span><span class="o">=</span><span class="s1">&#39;01-12-2019&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">googletrends</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Results over time</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">googletrends</span><span class="o">.</span><span class="n">temporal</span><span class="p">([</span><span class="s1">&#39;corona&#39;</span><span class="p">,</span><span class="s1">&#39;covid-19&#39;</span><span class="p">],</span> <span class="n">geo</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;nl&#39;</span><span class="p">,</span><span class="s1">&#39;italy&#39;</span><span class="p">],</span> <span class="n">date_start</span><span class="o">=</span><span class="s1">&#39;01-12-2019&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">googletrends</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="googletrends.googletrends.plot_spatio">
+<span class="sig-prename descclassname"><span class="pre">googletrends.googletrends.</span></span><span class="sig-name descname"><span class="pre">plot_spatio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">results</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(15,</span> <span class="pre">8)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showfig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googletrends.googletrends.plot_spatio" title="Permalink to this definition"></a></dt>
+<dd><p>Plot the spatio results.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>results</strong> (<em>dict</em>) – results are derived from the temporal() function.</p></li>
+<li><p><strong>figsize</strong> (<em>tuple</em><em>, </em><em>optional</em>) – Figure size (height, width). The default is ‘auto’.</p></li>
+<li><p><strong>showfig</strong> (<em>bool</em><em>, </em><em>optional</em>) – When True, auto open the map figures in your browser. The default is ‘True’.</p></li>
+<li><p><strong>verbose</strong> (<em>int</em><em>, </em><em>optional</em>) – Print message to screen. The default is 3.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>ax</strong> (<em>object</em>) – Axis.</p></li>
+<li><p><strong>out_map</strong> (<em>dict</em>) – DataFrame containing map data.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">googletrends</span><span class="o">.</span><span class="n">spatio</span><span class="p">([</span><span class="s1">&#39;corona&#39;</span><span class="p">,</span><span class="s1">&#39;covid-19&#39;</span><span class="p">],</span> <span class="n">geo</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;nl&#39;</span><span class="p">,</span><span class="s1">&#39;italy&#39;</span><span class="p">],</span> <span class="n">date_start</span><span class="o">=</span><span class="s1">&#39;01-12-2019&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">googletrends</span><span class="o">.</span><span class="n">plot_spatio</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="googletrends.googletrends.plot_temporal">
+<span class="sig-prename descclassname"><span class="pre">googletrends.googletrends.</span></span><span class="sig-name descname"><span class="pre">plot_temporal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">results</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'auto'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Set1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color_by_searchword</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_by_searchword</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googletrends.googletrends.plot_temporal" title="Permalink to this definition"></a></dt>
+<dd><p>Plot the temporal results.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>results</strong> (<em>dict</em>) – results are derived from the temporal() function.</p></li>
+<li><p><strong>figsize</strong> (<em>tuple</em><em>, </em><em>optional</em>) – Figure size (height, width). The default is ‘auto’.</p></li>
+<li><p><strong>cmap</strong> (<em>str</em><em>, </em><em>optional</em>) – colormap. The default is ‘Set1’.</p></li>
+<li><p><strong>color_by_searchword</strong> (<em>bool</em><em>, </em><em>optional</em>) – Color lines by searchwords. The default is True.</p></li>
+<li><p><strong>group_by_searchword</strong> (<em>TYPE</em><em>, </em><em>optional</em>) – Make subplots based on searchwords. The default is False.</p></li>
+<li><p><strong>verbose</strong> (<em>int</em><em>, </em><em>optional</em>) – Print message to screen. The default is 3.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>fig</strong> (<em>object</em>) – Figure.</p></li>
+<li><p><strong>ax</strong> (<em>object</em>) – Axis.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">googletrends</span><span class="o">.</span><span class="n">temporal</span><span class="p">([</span><span class="s1">&#39;corona&#39;</span><span class="p">,</span><span class="s1">&#39;covid-19&#39;</span><span class="p">],</span> <span class="n">geo</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;nl&#39;</span><span class="p">,</span><span class="s1">&#39;italy&#39;</span><span class="p">],</span> <span class="n">date_start</span><span class="o">=</span><span class="s1">&#39;01-12-2019&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">googletrends</span><span class="o">.</span><span class="n">plot_temporal</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="googletrends.googletrends.plot_trending">
+<span class="sig-prename descclassname"><span class="pre">googletrends.googletrends.</span></span><span class="sig-name descname"><span class="pre">plot_trending</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">results</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(15,</span> <span class="pre">20)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Set1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googletrends.googletrends.plot_trending" title="Permalink to this definition"></a></dt>
+<dd><p>Plot the trending results.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>results</strong> (<em>dict</em>) – results are derived from the temporal() function.</p></li>
+<li><p><strong>figsize</strong> (<em>tuple</em><em>, </em><em>optional</em>) – Figure size (height, width). The default is ‘auto’.</p></li>
+<li><p><strong>cmap</strong> (<em>str</em><em>, </em><em>optional</em>) – colormap. The default is ‘Set1’.</p></li>
+<li><p><strong>verbose</strong> (<em>int</em><em>, </em><em>optional</em>) – Print message to screen. The default is 3.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">googletrends</span><span class="o">.</span><span class="n">trending</span><span class="p">([</span><span class="s1">&#39;corona&#39;</span><span class="p">,</span><span class="s1">&#39;covid-19&#39;</span><span class="p">],</span> <span class="n">geo</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;nl&#39;</span><span class="p">,</span><span class="s1">&#39;italy&#39;</span><span class="p">],</span> <span class="n">date_start</span><span class="o">=</span><span class="s1">&#39;01-12-2019&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">googletrends</span><span class="o">.</span><span class="n">plot_trending</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="googletrends.googletrends.plot_worldmap">
+<span class="sig-prename descclassname"><span class="pre">googletrends.googletrends.</span></span><span class="sig-name descname"><span class="pre">plot_worldmap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">results</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['#ff0000']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showfig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googletrends.googletrends.plot_worldmap" title="Permalink to this definition"></a></dt>
+<dd><p>Plot results on the worldmap derived from googletrends.spatio().</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>results</strong> (<em>dict</em>) – results are derived from the temporal() function.</p></li>
+<li><p><strong>figsize</strong> (<em>tuple</em><em>, </em><em>optional</em>) – Figure size (height, width). The default is ‘auto’.</p></li>
+<li><p><strong>showfig</strong> (<em>bool</em><em>, </em><em>optional</em>) – When True, auto open the map figures in your browser. The default is ‘True’.</p></li>
+<li><p><strong>verbose</strong> (<em>int</em><em>, </em><em>optional</em>) – Print message to screen. The default is 3.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict containing results.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Trending results</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">googletrends</span><span class="o">.</span><span class="n">spatio</span><span class="p">([</span><span class="s1">&#39;corona&#39;</span><span class="p">,</span><span class="s1">&#39;covid-19&#39;</span><span class="p">],</span> <span class="n">geo</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;nl&#39;</span><span class="p">,</span><span class="s1">&#39;italy&#39;</span><span class="p">],</span> <span class="n">date_start</span><span class="o">=</span><span class="s1">&#39;01-12-2019&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">googletrends</span><span class="o">.</span><span class="n">plot_worldmap</span><span class="p">(</span><span class="n">results_spatio</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="googletrends.googletrends.spatio">
+<span class="sig-prename descclassname"><span class="pre">googletrends.googletrends.</span></span><span class="sig-name descname"><span class="pre">spatio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">searchwords</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date_start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date_stop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'news'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_suggestions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googletrends.googletrends.spatio" title="Permalink to this definition"></a></dt>
+<dd><p>Gather data for google searches over geographical locations and time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>searchwords</strong> (<em>list</em>) – Lookup each input word and return the (normalized) frequency of google searches.
+Example: [‘Corona’,’earth quake’]</p></li>
+<li><p><strong>geo</strong> (<em>list</em><em>, </em><em>optional</em>) – Filter on geographical locations.
+‘NL’ (only netherlands)
+[‘NL’,’germany’,’IT’]</p></li>
+<li><p><strong>date_start</strong> (<em>str</em><em> [</em><em>dd-mm-yyyy</em><em>]</em>) – String: Start date for counting.</p></li>
+<li><p><strong>date_stop</strong> (<em>str</em><em> [</em><em>dd-mm-yyyy</em><em>]</em><em>, </em><em>optional</em>) – String: Stop date for counting. If nothing is filled in, date of today is used.</p></li>
+<li><p><strong>method</strong> (<em>str</em><em>, </em><em>optional</em>) – Type of google search. The default is ‘news’.
+Choose on of those: ‘images’,’news’,’youtube’,’froogle’</p></li>
+<li><p><strong>include_suggestions</strong> (<em>bool</em><em>, </em><em>optional</em>) – Include suggestions. The default is False.</p></li>
+<li><p><strong>verbose</strong> (<em>int</em><em>, </em><em>optional</em>) – Print message to screen. The default is 3.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>Exception</strong> – code 429: Too Many google requests in a given amount of time (“rate limiting”).</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>Each input country has the following keys:</dt><dd><ul class="simple">
+<li><p>method (str) : Type of method.</p></li>
+<li><p>dict of dataframes  : Per country the counts for searchwords.</p></li>
+<li><p>geo (list): The abrevations of the country names.</p></li>
+<li><p>geo_names (list): The full name of the countries.</p></li>
+<li><p>searchwords (list): The input searchwords.</p></li>
+<li><p>date_range (str): The date: [from To].</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict containing results.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">googletrends</span><span class="o">.</span><span class="n">spatio</span><span class="p">([</span><span class="s1">&#39;bitcoin&#39;</span><span class="p">,</span><span class="s1">&#39;ethereum&#39;</span><span class="p">],</span> <span class="n">geo</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;nl&#39;</span><span class="p">,</span><span class="s1">&#39;italy&#39;</span><span class="p">],</span> <span class="n">date_start</span><span class="o">=</span><span class="s1">&#39;01-12-2012&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">googletrends</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="googletrends.googletrends.temporal">
+<span class="sig-prename descclassname"><span class="pre">googletrends.googletrends.</span></span><span class="sig-name descname"><span class="pre">temporal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">searchwords</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date_start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date_stop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'news'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googletrends.googletrends.temporal" title="Permalink to this definition"></a></dt>
+<dd><p>Gather data for google searches over time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>searchwords</strong> (<em>list</em>) – Lookup each input word and return the (normalized) frequency of google searches.
+Example: [‘Corona’,’earth quake’]</p></li>
+<li><p><strong>geo</strong> (<em>list</em><em>, </em><em>optional</em>) – Filter on geographical locations.
+‘NL’ (only netherlands)
+[‘NL’,’germany’,’IT’]</p></li>
+<li><p><strong>date_start</strong> (<em>str</em><em> [</em><em>dd-mm-yyyy</em><em>]</em>) – String: Start date for counting.</p></li>
+<li><p><strong>date_stop</strong> (<em>str</em><em> [</em><em>dd-mm-yyyy</em><em>]</em><em>, </em><em>optional</em>) – String: Stop date for counting. If nothing is filled in, date of today is used.</p></li>
+<li><p><strong>method</strong> (<em>str</em><em>, </em><em>optional</em>) – Type of google search. The default is ‘news’.
+Choose on of those: ‘images’,’news’,’youtube’,’froogle’</p></li>
+<li><p><strong>verbose</strong> (<em>int</em><em>, </em><em>optional</em>) – Print message to screen. The default is 3.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>Exception</strong> – code 429: Too Many google requests in a given amount of time (“rate limiting”).</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p>method (str) : Type of method.</p></li>
+<li><p>dict of dataframes  : Per country the counts for searchwords.</p></li>
+<li><p>geo (list): The abrevations of the country names.</p></li>
+<li><p>geo_names (list): The full name of hte countries.</p></li>
+<li><p>searchwords (list): The input searchwords.</p></li>
+<li><p>date_range (str): The date: [from To].</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict containing results.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">googletrends</span><span class="o">.</span><span class="n">temporal</span><span class="p">([</span><span class="s1">&#39;bitcoin&#39;</span><span class="p">,</span><span class="s1">&#39;ethereum&#39;</span><span class="p">],</span> <span class="n">geo</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;nl&#39;</span><span class="p">,</span> <span class="s1">&#39;united states&#39;</span><span class="p">],</span> <span class="n">date_start</span><span class="o">=</span><span class="s1">&#39;01-12-2019&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">googletrends</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="googletrends.googletrends.trending">
+<span class="sig-prename descclassname"><span class="pre">googletrends.googletrends.</span></span><span class="sig-name descname"><span class="pre">trending</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">searchwords</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date_start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date_stop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'news'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googletrends.googletrends.trending" title="Permalink to this definition"></a></dt>
+<dd><p>Trending google searches.</p>
+<p>If you choose a time period that is 3 months or shorter you get daily data, otherwise you get weekly data.
+If the time period is 3 years or longer, the monthly data is plotted, otherwise it is weekly data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>searchwords</strong> (<em>list</em>) – Lookup each input word and return the (normalized) frequency of google searches.
+Example: [‘Corona’,’earth quake’]</p></li>
+<li><p><strong>geo</strong> (<em>list</em><em>, </em><em>optional</em>) – Filter on geographical locations.
+‘NL’ (only netherlands),
+[‘NL’,’germany’,’IT’],
+‘world’ to examine all countries</p></li>
+<li><p><strong>date_start</strong> (<em>str</em><em> [</em><em>dd-mm-yyyy</em><em>]</em>) – String: Start date for counting.</p></li>
+<li><p><strong>date_stop</strong> (<em>str</em><em> [</em><em>dd-mm-yyyy</em><em>]</em><em>, </em><em>optional</em>) – String: Stop date for counting. If nothing is filled in, date of today is used.</p></li>
+<li><p><strong>method</strong> (<em>str</em><em>, </em><em>optional</em>) – Type of google search. The default is ‘news’.
+Choose on of those: ‘images’,’news’,’youtube’,’froogle’</p></li>
+<li><p><strong>verbose</strong> (<em>int</em><em>, </em><em>optional</em>) – Print message to screen. The default is 3.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>Exception</strong> – code 429: Too Many google requests in a given amount of time (“rate limiting”).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict containing results.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">googletrends</span><span class="o">.</span><span class="n">spatio</span><span class="p">([</span><span class="s1">&#39;bitcoin&#39;</span><span class="p">,</span><span class="s1">&#39;ethereum&#39;</span><span class="p">],</span> <span class="n">geo</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;nl&#39;</span><span class="p">,</span><span class="s1">&#39;italy&#39;</span><span class="p">],</span> <span class="n">date_start</span><span class="o">=</span><span class="s1">&#39;01-12-2012&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">googletrends</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Plot only on the worldmap</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">googletrends</span><span class="o">.</span><span class="n">plot_worldmap</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<hr>
+<center>
+        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CEADP27U&placement=erdogantgithubio" id="_carbonads_js"></script>
+</center>
+<hr></section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Coding%20quality.html" class="btn btn-neutral float-left" title="Coding quality" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Erdogan Taskesen.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

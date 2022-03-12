@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get country names and abbrevations &mdash; googletrends googletrends documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Sponsor" href="Documentation.html" />
+    <link rel="prev" title="Input/Output" href="Tutorials.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> googletrends
+          </a>
+              <div class="version">
+                0.1.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+    
+              <p class="caption" role="heading"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html#uninstalling">Uninstalling</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Tutorials.html">Input/Output</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Get country names and abbrevations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#analyze-timewise">Analyze Timewise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#analyze-timewise-with-groupby">Analyze Timewise with groupby</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#analyze-geographical">Analyze Geographical</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#analyze-trends">Analyze Trends</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Documentation.html">Sponsor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Documentation.html#github">Github</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Documentation.html#colab-notebook">Colab Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Coding%20quality.html">Coding quality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="googletrends.googletrends.html">API References</a></li>
+</ul>
+
+    <a href= "genindex.html">Index</a>
+  
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">googletrends</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Get country names and abbrevations</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Examples.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="get-country-names-and-abbrevations">
+<h1>Get country names and abbrevations<a class="headerlink" href="#get-country-names-and-abbrevations" title="Permalink to this headline"></a></h1>
+<p>The country name is required for the majority of fucntions. Here we will demonstrate how to view all 255 available countries that can be used to analyze trends.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import</span>
+<span class="kn">import</span> <span class="nn">googletrends</span> <span class="k">as</span> <span class="nn">googletrends</span>
+
+<span class="c1"># Get country names</span>
+<span class="n">geo_names</span> <span class="o">=</span> <span class="n">googletrends</span><span class="o">.</span><span class="n">get_geo_names</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">geo_names</span><span class="p">)</span>
+
+<span class="c1">#     code               country</span>
+<span class="c1"># 0     AD               andorra</span>
+<span class="c1"># 1     AE  united arab emirates</span>
+<span class="c1"># 2     AF           afghanistan</span>
+<span class="c1"># 3     AR             argentina</span>
+<span class="c1"># 4     AO                angola</span>
+<span class="c1"># ..   ...                   ...</span>
+<span class="c1"># 251   YE                 yemen</span>
+<span class="c1"># 252   YT               mayotte</span>
+<span class="c1"># 253   ZA          south africa</span>
+<span class="c1"># 254   ZM                zambia</span>
+<span class="c1"># 255   ZW              zimbabwe</span>
+</pre></div>
+</div>
+</section>
+<section id="analyze-timewise">
+<h1>Analyze Timewise<a class="headerlink" href="#analyze-timewise" title="Permalink to this headline"></a></h1>
+<p>In this example multiple searchwords are examined for multiple countries over time. Countries can be in the form of their abbrevation or country name. The until date is not given and automatically set on today.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import</span>
+<span class="kn">import</span> <span class="nn">googletrends</span> <span class="k">as</span> <span class="nn">googletrends</span>
+
+<span class="c1"># Settings</span>
+<span class="n">searchwords</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;bitcoin&#39;</span><span class="p">,</span> <span class="s1">&#39;ethereum&#39;</span><span class="p">]</span>
+<span class="n">geo</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;NL&#39;</span><span class="p">,</span> <span class="s1">&#39;united states&#39;</span><span class="p">]</span>
+<span class="n">date_start</span> <span class="o">=</span> <span class="s1">&#39;01-12-2012&#39;</span>
+
+<span class="c1"># Collect the google trends since 2012</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">googletrends</span><span class="o">.</span><span class="n">temporal</span><span class="p">(</span><span class="n">searchwords</span><span class="p">,</span> <span class="n">geo</span><span class="o">=</span><span class="n">geo</span><span class="p">,</span> <span class="n">date_start</span><span class="o">=</span><span class="n">date_start</span><span class="p">)</span>
+
+<span class="c1"># [googletrends] Collecting trends over time for geographically: [&#39;NL&#39;, &#39;US&#39;]</span>
+<span class="c1"># [googletrends] 01 December 2012 - 12 March 2022</span>
+<span class="c1"># [googletrends] [NL] Working on bitcoin..</span>
+<span class="c1"># [googletrends] [NL] Working on ethereum..</span>
+<span class="c1"># [googletrends] [US] Working on bitcoin..</span>
+<span class="c1"># [googletrends] [US] Working on ethereum..</span>
+
+<span class="c1"># Plot</span>
+<span class="n">googletrends</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils align-center" id="id1">
+<caption><span class="caption-text">google trends since 2012 for bitcoin and ethereum across the countries NL and US.</span><a class="headerlink" href="#id1" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><img alt="fig1" src="_images/bitcoin_temporal.png" /></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="analyze-timewise-with-groupby">
+<h1>Analyze Timewise with groupby<a class="headerlink" href="#analyze-timewise-with-groupby" title="Permalink to this headline"></a></h1>
+<p>The plot can be created in various manners, by using different groupby’s and coloring on searchwords.
+Let’s see what happens if use other groupings and coloring.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">googletrends</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">color_by_searchword</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">group_by_searchword</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">googletrends</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">color_by_searchword</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">group_by_searchword</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">googletrends</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">color_by_searchword</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">group_by_searchword</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">googletrends</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">color_by_searchword</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">group_by_searchword</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils align-center" id="id2">
+<caption><span class="caption-text">Four different plots for google trends.</span><a class="headerlink" href="#id2" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><img alt="fig1" src="_images/bitcoin_temporal.png" /></p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="fig2" src="_images/bitcoin_temporal2.png" /></p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="fig3" src="_images/bitcoin_temporal3.png" /></p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="fig4" src="_images/bitcoin_temporal4.png" /></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="analyze-geographical">
+<h1>Analyze Geographical<a class="headerlink" href="#analyze-geographical" title="Permalink to this headline"></a></h1>
+<p>In this example multiple searchwords are examined across multiple countries. The input for a country can be in the form of the abbrevation or country name. If the <strong>until date</strong> is not given, it will be set on today.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import</span>
+<span class="kn">import</span> <span class="nn">googletrends</span> <span class="k">as</span> <span class="nn">googletrends</span>
+
+<span class="c1"># Settings</span>
+<span class="n">searchwords</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;bitcoin&#39;</span><span class="p">,</span> <span class="s1">&#39;ethereum&#39;</span><span class="p">]</span>
+<span class="n">geo</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;NL&#39;</span><span class="p">,</span> <span class="s1">&#39;united kingdom&#39;</span><span class="p">]</span>
+<span class="n">date_start</span> <span class="o">=</span> <span class="s1">&#39;01-12-2012&#39;</span>
+
+<span class="c1"># Collect the google trends since 2012</span>
+<span class="n">results_spatio</span> <span class="o">=</span> <span class="n">googletrends</span><span class="o">.</span><span class="n">spatio</span><span class="p">(</span><span class="n">searchwords</span><span class="p">,</span> <span class="n">geo</span><span class="o">=</span><span class="n">geo</span><span class="p">,</span> <span class="n">date_start</span><span class="o">=</span><span class="n">date_start</span><span class="p">)</span>
+
+<span class="c1"># [googletrends] 01 December 2012 - 12 March 2022</span>
+<span class="c1"># [googletrends] [NL] Working on bitcoin..</span>
+<span class="c1"># [googletrends] [NL] Working on ethereum..</span>
+<span class="c1"># [googletrends] [GB] Working on bitcoin..</span>
+<span class="c1"># [googletrends] [GB] Working on ethereum..</span>
+
+<span class="c1"># Plot</span>
+<span class="n">googletrends</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">results_spatio</span><span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils align-center" id="id3">
+<caption><span class="caption-text">Google search per country and per searchword.</span><a class="headerlink" href="#id3" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><img alt="fig5" src="_images/bitcoin_geo_NL1.png" /></p></td>
+<td><p><img alt="fig6" src="_images/bitcoin_geo_UK.png" /></p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="fig7" src="_images/bitcoin_geo_NL.png" /></p></td>
+<td><p><img alt="fig8" src="_images/bitcoin_geo_UK1.png" /></p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p><img alt="fig9" src="_images/bitcoin_geo_worldmap.png" /></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="analyze-trends">
+<h1>Analyze Trends<a class="headerlink" href="#analyze-trends" title="Permalink to this headline"></a></h1>
+<p>In this example multiple searchwords are examined across multiple countries. The input for a country can be in the form of the abbrevation or country name. If the <strong>until date</strong> is not given, it will be set on today.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import</span>
+<span class="kn">import</span> <span class="nn">googletrends</span> <span class="k">as</span> <span class="nn">googletrends</span>
+
+<span class="c1"># Settings</span>
+<span class="n">searchwords</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;bitcoin&#39;</span><span class="p">,</span> <span class="s1">&#39;ethereum&#39;</span><span class="p">]</span>
+<span class="n">geo</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;NL&#39;</span><span class="p">,</span> <span class="s1">&#39;united kingdom&#39;</span><span class="p">]</span>
+<span class="n">date_start</span> <span class="o">=</span> <span class="s1">&#39;01-12-2012&#39;</span>
+
+<span class="c1"># Analyze the trends for the searchwords</span>
+<span class="n">results_trending</span> <span class="o">=</span> <span class="n">googletrends</span><span class="o">.</span><span class="n">trending</span><span class="p">(</span><span class="n">searchwords</span><span class="p">,</span> <span class="n">geo</span><span class="o">=</span><span class="n">geo</span><span class="p">,</span> <span class="n">date_start</span><span class="o">=</span><span class="n">date_start</span><span class="p">)</span>
+<span class="n">googletrends</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">results_trending</span><span class="p">)</span>
+
+<span class="c1"># --------[NL]--------</span>
+<span class="c1"># [bitcoin]</span>
+<span class="c1">#    Top: 25</span>
+<span class="c1">#    Rising: 25</span>
+<span class="c1">#    Trending: 20</span>
+<span class="c1"># [ethereum]</span>
+<span class="c1">#    Top: 20</span>
+<span class="c1">#    Rising: 20</span>
+<span class="c1">#    Trending: 20</span>
+</pre></div>
+</div>
+<table class="docutils align-center" id="id4">
+<caption><span class="caption-text">google trends.</span><a class="headerlink" href="#id4" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><img alt="fig10" src="_images/bitcoin_NL_trends.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<center>
+        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CEADP27U&placement=erdogantgithubio" id="_carbonads_js"></script>
+</center>
+<hr></section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Tutorials.html" class="btn btn-neutral float-left" title="Input/Output" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Documentation.html" class="btn btn-neutral float-right" title="Sponsor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Erdogan Taskesen.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
