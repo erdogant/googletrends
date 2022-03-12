@@ -23,7 +23,7 @@ import worldmap
 
 # %% Trending google searches
 def trending(searchwords, geo=None, date_start=None, date_stop=None, method='news', verbose=3):
-    """ Gather data for trending google searches.
+    """Trending google searches.
 
     Description
     -----------
@@ -61,7 +61,7 @@ def trending(searchwords, geo=None, date_start=None, date_stop=None, method='new
 
     Examples
     --------
-    >>> result = googletrends.spatio(['corona','covid-19'], geo=['nl','italy'], date_start='01-12-2019')
+    >>> result = googletrends.spatio(['bitcoin','ethereum'], geo=['nl','italy'], date_start='01-12-2012')
     >>> googletrends.plot(result)
     >>> # Plot only on the worldmap
     >>> googletrends.plot_worldmap(result)
@@ -79,7 +79,7 @@ def trending(searchwords, geo=None, date_start=None, date_stop=None, method='new
         geo = get_geo_names()['code'].values
 
     # Convert to country name to code
-    for i in range(0,len(geo)):
+    for i in range(0, len(geo)):
         geo[i]=geo[i].upper()
         if len(geo[i])>3:
             geo[i]=worldmap.county2code(geo[i])[0][0].upper()
@@ -88,11 +88,11 @@ def trending(searchwords, geo=None, date_start=None, date_stop=None, method='new
     _, _, date_range = _set_dates(date_start, date_stop, verbose=verbose)
 
     # Collect data per searchword
-    df, df_rising, df_top = {},{},{}
+    df, df_rising, df_top = {}, {}, {}
     if verbose>=3: print('[googletrends]')
     for geo_name in geo:
-        df[geo_name], df_rising[geo_name],df_top[geo_name] = {},{},{}
-        dftmp, dftmp1, dftmp2=[],[],[]
+        df[geo_name], df_rising[geo_name], df_top[geo_name] = {},{},{}
+        dftmp, dftmp1, dftmp2=[], [], []
 
         if verbose>=3: print('--------[%s]--------' % geo_name)
 
@@ -177,10 +177,16 @@ def temporal(searchwords, geo=None, date_start=None, date_stop=None, method='new
     Returns
     -------
     dict containing results.
-    
+        * method (str) : Type of method.
+        * dict of dataframes  : Per country the counts for searchwords.
+        * geo (list): The abrevations of the country names.
+        * geo_names (list): The full name of hte countries.
+        * searchwords (list): The input searchwords.
+        * date_range (str): The date: [from To].
+
     Examples
     --------
-    >>> result = googletrends.temporal(['corona','covid-19'], geo=['nl','italy'], date_start='01-12-2019')
+    >>> result = googletrends.temporal(['bitcoin','ethereum'], geo=['nl', 'united states'], date_start='01-12-2019')
     >>> googletrends.plot(result)
 
     """
@@ -270,10 +276,17 @@ def spatio(searchwords, geo='', date_start=None, date_stop=None, method='news', 
     Returns
     -------
     dict containing results.
-    
+        Each input country has the following keys:
+            * method (str) : Type of method.
+            * dict of dataframes  : Per country the counts for searchwords.
+            * geo (list): The abrevations of the country names.
+            * geo_names (list): The full name of the countries.
+            * searchwords (list): The input searchwords.
+            * date_range (str): The date: [from To].
+
     Examples
     --------
-    >>> result = googletrends.spatio(['corona','covid-19'], geo=['nl','italy'], date_start='01-12-2019')
+    >>> result = googletrends.spatio(['bitcoin','ethereum'], geo=['nl','italy'], date_start='01-12-2012')
     >>> googletrends.plot(result)
 
     """
@@ -407,7 +420,7 @@ def plot_temporal(results, figsize='auto', cmap='Set1', color_by_searchword=True
     else:
         linestyles = ['-']
         linewidths = [1.5]
-    
+
     # Make subplots
     fig, ax, fontsize = _make_plots(results, group_by_searchword, figsize, verbose=verbose)
     # Make colors
@@ -436,12 +449,12 @@ def plot_temporal(results, figsize='auto', cmap='Set1', color_by_searchword=True
                     xnew, ynew = np.arange(0, len(xs)), ys
                 # Draw the line
                 ax[pi].plot(xnew, ynew, color=color, ls=linestyle, lw=linewidth, label=key + ' ' + searchword)
-                ax[pi].fill_between(range(0,len(xs)), ys, where=ys>=np.zeros(len(xs)), interpolate=True, color=color, alpha=alpha)
+                ax[pi].fill_between(range(0, len(xs)), ys, where=ys>=np.zeros(len(xs)), interpolate=True, color=color, alpha=alpha)
 
     # Set axis
     for i in np.arange(0, len(ax)):
-        idx = list(np.arange(0,len(xs),step=10)) + [len(xs) - 1]
-        ax[i].set_ylim([0,100])
+        idx = list(np.arange(0, len(xs), step=10)) + [len(xs) - 1]
+        ax[i].set_ylim([0, 100])
         ax[i].set_xticks(idx)
 
         # labels on only bottom figure
@@ -655,7 +668,7 @@ def plot(results, figsize='auto', cmap=['#ff0000'], color_by_searchword=True, gr
     out = {}
 
     if results['method']=='geo':
-        if figsize=='auto': figsize=(15,8)
+        if figsize=='auto': figsize=(15, 8)
         for key in results['geo']:
             out[key] = plot_spatio(results[key], figsize=figsize, showfig=showfig, verbose=verbose)
         if len(results['geo'])>1:
@@ -665,7 +678,7 @@ def plot(results, figsize='auto', cmap=['#ff0000'], color_by_searchword=True, gr
         fig, ax = plot_temporal(results, figsize=figsize, color_by_searchword=color_by_searchword, group_by_searchword=group_by_searchword, verbose=verbose)
 
     if results['method']=='trending':
-        if figsize=='auto': figsize=(15,20)
+        if figsize=='auto': figsize=(15, 20)
         plot_trending(results, figsize=figsize, verbose=verbose)
 
 
