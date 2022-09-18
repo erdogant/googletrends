@@ -12,9 +12,10 @@ There are three main functionalities to reveal insights in the topics of interes
 	* Search Geographically (Spatio)
 	* Search Trending
 
-Star is important
-======================
-If you ❤️ this project, **star** this repo at the `github page <https://github.com/erdogant/googletrends/>`_!
+
+You contribution is important
+==============================
+If you ❤️ this project, **star** this repo at the `github page <https://github.com/erdogant/googletrends/>`_ and have a look at the `sponser page <https://github.com/erdogant/googletrends/pages/html/Documentation.html>`_!
 
 
 Github
