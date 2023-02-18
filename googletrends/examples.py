@@ -4,6 +4,24 @@ import googletrends as googletrends
 # %% Get country names
 geo_names = googletrends.get_geo_names()
 
+# %% RWS
+searchwords = ['ChatbotGPT']
+geo = ['NL']
+date_start = '01-12-2012'
+
+# Temporal
+results = googletrends.temporal(searchwords, geo=geo, date_start=date_start)
+googletrends.plot(results, color_by_searchword=True, group_by_searchword=False)
+
+#  spatio
+results_spatio = googletrends.spatio(searchwords, geo=geo, date_start=date_start)
+googletrends.plot(results_spatio)
+
+# Trending
+results_trending = googletrends.trending(searchwords, geo=geo, date_start=date_start)
+googletrends.plot(results_trending)
+
+
 # %% Linked-in example
 # searchwords = ['corona', 'covid', 'Wuhan']
 searchwords = ['bitcoin', 'ethereum']
