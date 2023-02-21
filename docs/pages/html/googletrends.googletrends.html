@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>&lt;no title&gt; &mdash; googletrends googletrends documentation</title>
+  <title>Description &mdash; googletrends googletrends documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
@@ -17,6 +17,7 @@
         <script src="_static/underscore.js"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" /> 
@@ -82,7 +83,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>&lt;no title&gt;</li>
+      <li>Description</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/googletrends.googletrends.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -92,13 +93,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <hr>
-<center>
-        <script async src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
-        <div data-ea-publisher="erdogantgithubio" data-ea-type="text"></div>
-        <!-- <div data-ea-publisher="erdogantgithubio" data-ea-type="text" data-ea-style="fixedfooter"></div> -->
-</center>
-<hr><span class="target" id="module-googletrends.googletrends"></span><p>Python package to examine trending, spatio and temporal google searching for input queries.</p>
+  <span class="target" id="module-googletrends.googletrends"></span><p>Python package to examine trending, spatio and temporal google searching for input queries.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="googletrends.googletrends.get_geo_names">
 <span class="sig-prename descclassname"><span class="pre">googletrends.googletrends.</span></span><span class="sig-name descname"><span class="pre">get_geo_names</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'https://erdogant.github.io/datasets/country_and_code.zip'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googletrends.googletrends.get_geo_names" title="Permalink to this definition"></a></dt>
@@ -353,29 +348,57 @@ Choose on of those: ‘images’,’news’,’youtube’,’froogle’</p></li>
 <dt class="sig sig-object py" id="googletrends.googletrends.trending">
 <span class="sig-prename descclassname"><span class="pre">googletrends.googletrends.</span></span><span class="sig-name descname"><span class="pre">trending</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">searchwords</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date_start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date_stop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'news'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#googletrends.googletrends.trending" title="Permalink to this definition"></a></dt>
 <dd><p>Trending google searches.</p>
+<section id="description">
+<h1>Description<a class="headerlink" href="#description" title="Permalink to this heading"></a></h1>
 <p>If you choose a time period that is 3 months or shorter you get daily data, otherwise you get weekly data.
 If the time period is 3 years or longer, the monthly data is plotted, otherwise it is weekly data.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>searchwords</strong> (<em>list</em>) – Lookup each input word and return the (normalized) frequency of google searches.
-Example: [‘Corona’,’earth quake’]</p></li>
-<li><p><strong>geo</strong> (<em>list</em><em>, </em><em>optional</em>) – Filter on geographical locations.
+<dt class="field-odd">param searchwords</dt>
+<dd class="field-odd"><p>Lookup each input word and return the (normalized) frequency of google searches.
+Example: [‘Corona’,’earth quake’]</p>
+</dd>
+<dt class="field-even">type searchwords</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+<dt class="field-odd">param geo</dt>
+<dd class="field-odd"><p>Filter on geographical locations.
 ‘NL’ (only netherlands),
 [‘NL’,’germany’,’IT’],
-‘world’ to examine all countries</p></li>
-<li><p><strong>date_start</strong> (<em>str</em><em> [</em><em>dd-mm-yyyy</em><em>]</em>) – String: Start date for counting.</p></li>
-<li><p><strong>date_stop</strong> (<em>str</em><em> [</em><em>dd-mm-yyyy</em><em>]</em><em>, </em><em>optional</em>) – String: Stop date for counting. If nothing is filled in, date of today is used.</p></li>
-<li><p><strong>method</strong> (<em>str</em><em>, </em><em>optional</em>) – Type of google search. The default is ‘news’.
-Choose on of those: ‘images’,’news’,’youtube’,’froogle’</p></li>
-<li><p><strong>verbose</strong> (<em>int</em><em>, </em><em>optional</em>) – Print message to screen. The default is 3.</p></li>
-</ul>
+‘world’ to examine all countries</p>
 </dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p><strong>Exception</strong> – code 429: Too Many google requests in a given amount of time (“rate limiting”).</p>
+<dt class="field-even">type geo</dt>
+<dd class="field-even"><p>list, optional</p>
 </dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>dict containing results.</p>
+<dt class="field-odd">param date_start</dt>
+<dd class="field-odd"><p>String: Start date for counting.</p>
+</dd>
+<dt class="field-even">type date_start</dt>
+<dd class="field-even"><p>str [dd-mm-yyyy]</p>
+</dd>
+<dt class="field-odd">param date_stop</dt>
+<dd class="field-odd"><p>String: Stop date for counting. If nothing is filled in, date of today is used.</p>
+</dd>
+<dt class="field-even">type date_stop</dt>
+<dd class="field-even"><p>str [dd-mm-yyyy], optional</p>
+</dd>
+<dt class="field-odd">param method</dt>
+<dd class="field-odd"><p>Type of google search. The default is ‘news’.
+Choose on of those: ‘images’,’news’,’youtube’,’froogle’</p>
+</dd>
+<dt class="field-even">type method</dt>
+<dd class="field-even"><p>str, optional</p>
+</dd>
+<dt class="field-odd">param verbose</dt>
+<dd class="field-odd"><p>Print message to screen. The default is 3.</p>
+</dd>
+<dt class="field-even">type verbose</dt>
+<dd class="field-even"><p>int, optional</p>
+</dd>
+<dt class="field-odd">raises Exception</dt>
+<dd class="field-odd"><p>code 429: Too Many google requests in a given amount of time (“rate limiting”).</p>
+</dd>
+<dt class="field-even">rtype</dt>
+<dd class="field-even"><p>dict containing results.</p>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
@@ -385,6 +408,7 @@ Choose on of those: ‘images’,’news’,’youtube’,’froogle’</p></li>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">googletrends</span><span class="o">.</span><span class="n">plot_worldmap</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </pre></div>
 </div>
+</section>
 </dd></dl>
 
 <hr>
