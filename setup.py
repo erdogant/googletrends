@@ -13,7 +13,7 @@ else:
 with open("README.md", "r") as fh:
     long_description = fh.read()
 setuptools.setup(
-     install_requires=['pytrends','matplotlib','numpy','pandas','worldmap','sklearn','colourmap','scipy'],
+     install_requires=['pytrends','matplotlib','numpy','pandas','worldmap','scikit-learn','colourmap','scipy'],
      python_requires='>=3',
      name='googletrends',
      version=new_version,
