@@ -4,7 +4,8 @@ import googletrends as googletrends
 # %% Get country names
 geo_names = googletrends.get_geo_names()
 
-# %% RWS
+
+# %%
 searchwords = ['ChatbotGPT']
 geo = ['NL']
 date_start = '01-12-2012'
